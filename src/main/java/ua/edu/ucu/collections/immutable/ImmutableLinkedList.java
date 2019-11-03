@@ -1,6 +1,6 @@
 package ua.edu.ucu.collections.immutable;
 
-public class ImmutableLinkedList implements ImmutableList{
+public class ImmutableLinkedList implements ImmutableList {
 
     private Node head;
     private int size;
@@ -183,7 +183,7 @@ public class ImmutableLinkedList implements ImmutableList{
 
     @Override
     public boolean isEmpty() {
-        return (size == 0 && head == null);
+        return size == 0 && head == null;
     }
 
 
@@ -234,7 +234,7 @@ public class ImmutableLinkedList implements ImmutableList{
 
     public Object getFirst() {
 
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new IndexOutOfBoundsException("Empty structure");
         }
 

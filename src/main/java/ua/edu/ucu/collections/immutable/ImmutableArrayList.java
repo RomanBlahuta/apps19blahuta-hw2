@@ -2,7 +2,7 @@ package ua.edu.ucu.collections.immutable;
 
 import java.util.Arrays;
 
-public class ImmutableArrayList implements ImmutableList{
+public class ImmutableArrayList implements ImmutableList {
 
     private Object[] arr;
 
@@ -156,8 +156,9 @@ public class ImmutableArrayList implements ImmutableList{
 
     @Override
     public Object[] toArray() {
-
-        return arr;
+        Object[] res = new Object[arr.length];
+        System.arraycopy(arr, 0, res, 0, arr.length);
+        return res;
     }
 
 
