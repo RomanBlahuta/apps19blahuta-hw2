@@ -46,7 +46,8 @@ public class ImmutableLinkedList implements ImmutableList {
     public ImmutableLinkedList add(int index, Object e) {
 
         if (index > size || index < 0) {
-            throw new IndexOutOfBoundsException("LinkedList Index Out Of Range");
+            throw new IndexOutOfBoundsException(
+                    "LinkedList Index Out Of Range");
         }
 
         ImmutableLinkedList newInstance = new ImmutableLinkedList();
@@ -79,7 +80,8 @@ public class ImmutableLinkedList implements ImmutableList {
     public ImmutableLinkedList addAll(int index, Object[] c) {
 
         if (index > size || index < 0) {
-            throw new IndexOutOfBoundsException("LinkedList Index Out Of Range");
+            throw new IndexOutOfBoundsException(
+                    "LinkedList Index Out Of Range");
         }
 
         ImmutableLinkedList newInstance = new ImmutableLinkedList();
@@ -104,7 +106,8 @@ public class ImmutableLinkedList implements ImmutableList {
     public Object get(int index) {
 
         if (index >= size || index < 0) {
-            throw new IndexOutOfBoundsException("LinkedList Index Out Of Range");
+            throw new IndexOutOfBoundsException(
+                    "LinkedList Index Out Of Range");
         }
         Node pointer = head;
         for (int i = 0; i < index; i++) {
@@ -119,7 +122,8 @@ public class ImmutableLinkedList implements ImmutableList {
     public ImmutableLinkedList remove(int index) {
 
         if (index >= size || index < 0) {
-            throw new IndexOutOfBoundsException("LinkedList Index Out Of Range");
+            throw new IndexOutOfBoundsException(
+                    "LinkedList Index Out Of Range");
         }
 
         Node pointer = head;
@@ -142,7 +146,8 @@ public class ImmutableLinkedList implements ImmutableList {
     public ImmutableLinkedList set(int index, Object e) {
 
         if (index >= size || index < 0) {
-            throw new IndexOutOfBoundsException("LinkedList Index Out Of Range");
+            throw new IndexOutOfBoundsException(
+                    "LinkedList Index Out Of Range");
         }
         ImmutableLinkedList removed = this.remove(index);
         return removed.add(index, e);
