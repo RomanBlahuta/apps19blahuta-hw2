@@ -215,11 +215,11 @@ public class ImmutableLinkedList implements ImmutableList {
             str.append(pointer.value + ", ");
             pointer = pointer.next;
         }
-        String str1 = str.toString();
-        if (str1.length() > 0) {
-            str1 = str1.substring(0, str1.length() - 2);
+        String strRes = str.toString();
+        if (strRes.length() > 0) {
+            strRes = strRes.substring(0, strRes.length() - 2);
         }
-        return str1;
+        return strRes;
     }
 
 
