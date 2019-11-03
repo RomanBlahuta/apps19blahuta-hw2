@@ -210,15 +210,16 @@ public class ImmutableLinkedList implements ImmutableList {
     @Override
     public String toString() {
         Node pointer = head;
-        String str = "";
+        StringBuffer str = new StringBuffer();
         while (pointer != null) {
-            str += pointer.value + ", ";
+            str.append(pointer.value + ", ");
             pointer = pointer.next;
         }
-        if (str.length() > 0) {
-            str = str.substring(0, str.length() - 2);
+        String str1 = str.toString();
+        if (str1.length() > 0) {
+            str1 = str1.substring(0, str1.length() - 2);
         }
-        return str;
+        return str1;
     }
 
 
