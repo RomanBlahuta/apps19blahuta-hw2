@@ -126,7 +126,7 @@ public final class ImmutableArrayList implements ImmutableList {
         if (e == null) {
             for (int i = 0; i < arr.length; i++) {
 
-                if (arr[i] == e) {
+                if (arr[i] == null) {
                     return i;
                 }
             }
