@@ -2,9 +2,13 @@ package ua.edu.ucu.collections.immutable;
 
 import java.util.Arrays;
 
-public class ImmutableArrayList implements ImmutableList {
+public final class ImmutableArrayList implements ImmutableList {
 
     private Object[] arr;
+
+    public ImmutableArrayList() {
+        this.arr = new Object[]{};
+    }
 
     public ImmutableArrayList(Object[] arr) {
 
@@ -119,10 +123,26 @@ public class ImmutableArrayList implements ImmutableList {
     @Override
     public int indexOf(Object e) {
 
-        for (int i = 0; i < arr.length; i++) {
+        if (e == null) {
+            for (int i = 0; i < arr.length; i++) {
 
-            if (arr[i] == e) {
-                return i;
+                if (arr[i] == e) {
+                    return i;
+                }
+            }
+        }
+        else {
+            for (int i = 0; i < arr.length; i++) {
+                if (arr[i] != null) {
+                    if (arr[i].equals(e)) {
+                        return i;
+                    }
+                }
+                else {
+                    if (arr[i] == e) {
+                        return i;
+                    }
+                }
             }
         }
         return -1;

@@ -1,6 +1,6 @@
 package ua.edu.ucu.collections.immutable;
 
-public class ImmutableLinkedList implements ImmutableList {
+public final class ImmutableLinkedList implements ImmutableList {
 
     private Node head;
     private int size;
@@ -161,8 +161,15 @@ public class ImmutableLinkedList implements ImmutableList {
         Node pointer = head;
         int i = 0;
         while (pointer != null) {
-            if (pointer.value == e) {
-                return i;
+            if (e == null || pointer.value == null) {
+                if (pointer.value == e) {
+                    return i;
+                }
+            }
+            else {
+                if (pointer.value.equals(e)) {
+                    return i;
+                }
             }
             pointer = pointer.next;
             i++;
